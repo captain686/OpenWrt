@@ -132,7 +132,7 @@ jobs:
         artifacts: ${{ env.FIRMWARE }}/*
         allowUpdates: true
         tag: ${{ env.FILE_NAME }}
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.TOKEN }}
         body: |
           **This is OpenWrt firmware for X86_64**
           * 这是 X86_64 平台使用的 OpenWrt 固件
