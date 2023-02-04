@@ -11,10 +11,10 @@
 # sed -i 's/192.168.1.1/10.10.10.10/g' package/base-files/files/bin/config_generate
 
 # Autocore
-sed -i 's/TARGET_rockchip/TARGET_rockchip\|\|TARGET_armvirt/g' package/lean/autocore/Makefile
+# sed -i 's/TARGET_rockchip/TARGET_rockchip\|\|TARGET_armvirt/g' package/lean/autocore/Makefile
 
 # Cpufreq
-sed -i 's/services/system/g' feeds/luci/applications/luci-app-cpufreq/luasrc/controller/cpufreq.lua
+# sed -i 's/services/system/g' feeds/luci/applications/luci-app-cpufreq/luasrc/controller/cpufreq.lua
 
 # 移除重复软件包
 rm -rf feeds/packages/net/mosdns
@@ -90,6 +90,7 @@ sed -i "s|opt/kernel|https://github.com/ophub/kernel/tree/main/pub/stable|g" pac
 sed -i "s|ARMv8|ARMv8_PLUS|g" package/luci-app-amlogic/root/etc/config/amlogic
 
 # MosDNS
+svn co https://github.com/haiibo/packages/trunk/luci-app-onliner package/luci-app-onliner
 svn co https://github.com/QiuSimons/openwrt-mos/trunk/luci-app-mosdns package/luci-app-mosdns
 svn co https://github.com/QiuSimons/openwrt-mos/trunk/mosdns package/mosdns
 
