@@ -53,6 +53,7 @@ jobs:
         echo "--------------------------硬盘信息--------------------------"
         echo "硬盘数量：$(ls /dev/sd* | grep -v [1-9] | wc -l)" && df -hT
         echo "--------------------------文件信息--------------------------"
+        echo "$(env)"
         echo "$(pwd)"
         echo "$(ls -la)"
     - name: Initialization environment
