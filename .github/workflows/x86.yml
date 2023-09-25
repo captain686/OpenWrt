@@ -52,6 +52,9 @@ jobs:
         echo -e "$(sudo lshw -short -C memory | grep GiB) \n"
         echo "--------------------------硬盘信息--------------------------"
         echo "硬盘数量：$(ls /dev/sd* | grep -v [1-9] | wc -l)" && df -hT
+        echo "--------------------------文件信息--------------------------"
+        echo "$(pwd)"
+        echo "$(ls -la)"
     - name: Initialization environment
       env:
         DEBIAN_FRONTEND: noninteractive
