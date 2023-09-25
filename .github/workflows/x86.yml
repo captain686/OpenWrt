@@ -127,4 +127,4 @@ jobs:
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
         name: Upload_OpenWrt_firmware
-        path: openwrt/bin/targets/x86/64/openwrt-*.img.gz
+        path: $GITHUB_WORKSPACE/openwrt/bin/targets/x86/64/openwrt-*.img.gz
