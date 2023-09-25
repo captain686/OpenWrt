@@ -79,9 +79,10 @@ jobs:
     - name: Load custom feeds
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
-        chmod +x $DIY_SPRICT_SH
+        mv $DIY_SPRICT_SH openwrt
         cd openwrt
-        $GITHUB_WORKSPACE/$DIY_SPRICT_SH
+        chmod +x $DIY_SPRICT_SH
+        ./$DIY_SPRICT_SH
 
     - name: Load custom configuration
       run: |
