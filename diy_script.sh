@@ -45,7 +45,7 @@ svn export https://github.com/immortalwrt/luci/branches/openwrt-18.06/applicatio
 
 # 科学上网插件
 svn export https://github.com/ysx88/openwrt-packages/trunk/luci-app-ssr-plus package/luci-app-ssr-plus
-git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr package/luci-app-vssr
+# git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr package/luci-app-vssr
 git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb package/lua-maxminddb
 # git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
 # svn export https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall package/luci-app-passwall
